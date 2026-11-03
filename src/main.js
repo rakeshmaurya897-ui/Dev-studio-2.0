@@ -36,4 +36,3 @@ document.querySelector('#contactForm').addEventListener('submit',event=>{
  document.querySelector('#formStatus').textContent='Your email app should open with the enquiry ready to send.'
  window.location.href='mailto:'+email+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body)
 })
-
