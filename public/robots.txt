@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://devstudiobuild.in/sitemap.xml
