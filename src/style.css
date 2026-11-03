@@ -79,3 +79,121 @@ footer{font-size:10px;color:#555b50}
 .product-card a{margin-top:auto;padding-top:20px;text-decoration:none;font-size:10px;font-weight:800;color:#20231e}
 .product-card a:hover{color:#819c36}
 @media(max-width:700px){.product-grid{grid-template-columns:1fr}.products-section{padding:65px 0}.product-card{min-height:225px}}
+
+/* User-friendly readability and balanced layout */
+:root{--ink:#20231e;--muted:#51574d;--line:#d5d8cd;--paper:#f7f8f4;--lime:#d7f36a}
+body{font-size:16px;line-height:1.65;color:#20251f;background:#f7f8f4}
+.site-shell{max-width:1240px;padding:0 5%}
+.header{height:76px}
+.logo{font-size:14px;letter-spacing:.08em}
+.logo small{font-size:10px;color:#4c5545}
+.nav{gap:25px}
+.nav a{font-size:14px;color:#343b31}
+.nav .nav-cta{padding:12px 17px}
+.hero{min-height:0;grid-template-columns:1.05fr .95fr;gap:4%;padding:64px 0 58px}
+.hero h1{font-size:clamp(48px,5.4vw,72px);line-height:1.02;letter-spacing:-.055em;margin:22px 0}
+.hero-lead{font-size:17px;line-height:1.8;color:#454d42;max-width:540px}
+.eyebrow{font-size:11px;color:#4d6425;letter-spacing:.1em}
+.hero-actions{gap:18px;flex-wrap:wrap}
+.btn{font-size:14px;padding:14px 18px;gap:18px}
+.under-link{font-size:14px;color:#30392a}
+.hero-foot{font-size:11px;color:#4c5547;margin-top:35px}
+.hero-visual{height:350px;border-radius:12px}
+.orb{width:270px;height:270px}.orb-two{width:300px;height:300px}
+.card-back{width:190px;height:210px}.card-back strong{font-size:27px}
+.card-front{width:205px;height:220px}
+.chart{height:85px}
+.floating-stamp{width:68px;height:68px;font-size:9px}
+.visual-top,.visual-bottom{font-size:9px;color:#38452c}
+.trust-strip{font-size:14px;color:#3e463a;padding:18px 0}
+.trust-strip>span{font-size:10px;color:#4d5747}
+.section{padding:76px 0}
+.section-head{margin-bottom:32px;align-items:flex-end}
+.section-head h2,.process-intro h2,.faq-section h2,.contact-copy h2{font-size:clamp(36px,4.2vw,52px);line-height:1.08;letter-spacing:-.045em}
+.section-head>p{font-size:16px;line-height:1.75;color:#4c5449;max-width:420px}
+.service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.service-card{padding:26px;min-height:245px;background:#fff;border-color:#dce0d6}
+.service-top{font-size:10px;color:#50584c}
+.service-card h3{font-size:22px;letter-spacing:-.025em;margin:20px 0 10px}
+.service-card>p{font-size:15px;line-height:1.8;color:#41493f}
+.tags span{font-size:11px;color:#3f4935;padding:6px 9px}
+.arrow-link{font-size:14px;padding-top:20px}
+.products-section{padding:76px 0}
+.product-card{background:#fff;border:1px solid #dce0d6;border-radius:10px;min-height:230px;padding:26px}
+.product-kicker{font-size:10px;color:#4d6425}
+.product-card h3{font-size:22px;line-height:1.25;letter-spacing:-.025em;margin:18px 0 8px}
+.product-card p{font-size:15px;line-height:1.8;color:#41493f}
+.product-card a{font-size:14px;color:#25321b}
+.work-section{padding:76px 0 82px}
+.project-grid{gap:18px}
+.project-art{height:190px;border-radius:9px}
+.project-art>span,.project-meta>span{font-size:10px}
+.project-art-title{font-size:clamp(28px,3vw,42px)}
+.project-meta h3{font-size:18px}
+.project-meta p{font-size:14px;line-height:1.75;color:#41493f}
+.process-section{padding:58px 6%;border-radius:12px;gap:7%}
+.process-intro h2{font-size:clamp(36px,4vw,50px)}
+.process-intro>p{font-size:15px;line-height:1.8;color:#e0e5d8}
+.steps article{padding:18px 0}
+.steps article>b{font-size:13px}
+.steps h3{font-size:18px}
+.steps p{font-size:14px;line-height:1.8;color:#e0e5d8}
+.pricing-section{padding:76px 0}
+.price-card{border-radius:10px;overflow:hidden;background:#fff}
+.price-main,.price-includes{padding:30px}
+.price-label,.price-includes>span{font-size:11px}
+.price{font-size:44px;margin:18px 0 8px}
+.price-main>p{font-size:15px;line-height:1.8;color:#41493f}
+.price-includes li{font-size:15px;padding:10px 0}
+.price-includes small{font-size:13px;line-height:1.7;color:#41493f}
+.custom-note{font-size:14px;flex-wrap:wrap}
+.custom-note span{font-size:14px;color:#41493f}
+.faq-section{padding:76px 0;gap:8%}
+.faqs summary{font-size:16px;line-height:1.5}
+.faqs p{font-size:14px;line-height:1.8;color:#41493f}
+.contact-section{padding:52px 6%;gap:7%;border-radius:12px}
+.contact-copy h2{font-size:clamp(40px,4.5vw,56px)}
+.contact-copy>p{font-size:15px;line-height:1.8;color:#41493f}
+.contact-email{font-size:15px}
+.contact-location{font-size:10px;color:#424b3b;line-height:1.8}
+.contact-form{gap:13px}
+.contact-form label{font-size:13px;color:#333d2e}
+.contact-form input,.contact-form select,.contact-form textarea{font-size:15px;padding:12px 13px;background:#fff;border-color:#c3cabb}
+.contact-form small{font-size:12px;line-height:1.7;color:#41493f}
+.form-status{font-size:13px}
+footer{font-size:11px;color:#424b3b;min-height:84px}
+.footer-logo small{font-size:9px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #769b2d;outline-offset:3px}
+@media(max-width:850px){
+ .hero{grid-template-columns:1fr;gap:28px;padding:48px 0}
+ .hero-visual{height:330px}
+ .project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .process-section{grid-template-columns:1fr;gap:28px}
+ .contact-section{grid-template-columns:1fr;gap:28px}
+}
+@media(max-width:600px){
+ .site-shell{padding:0 5%}
+ .header{height:68px}
+ .nav{top:68px;padding:18px 5%;gap:15px}
+ .nav a{font-size:15px}
+ .hero{padding:40px 0}
+ .hero h1{font-size:clamp(42px,12vw,58px)}
+ .hero-lead{font-size:16px}
+ .hero-visual{height:285px}
+ .section,.work-section,.pricing-section,.products-section{padding:56px 0}
+ .section-head h2,.process-intro h2,.faq-section h2,.contact-copy h2{font-size:38px}
+ .section-head>p{font-size:15px}
+ .service-grid,.product-grid,.project-grid{grid-template-columns:1fr}
+ .service-card{padding:22px;min-height:0}
+ .service-card>p,.product-card p,.project-meta p{font-size:14px}
+ .product-card{padding:22px;min-height:0}
+ .project-art{height:180px}
+ .process-section{padding:36px 6%}
+ .price-card{grid-template-columns:1fr}
+ .price-includes{border-left:0;border-top:1px solid var(--line)}
+ .custom-note{align-items:flex-start}
+ .faq-section{grid-template-columns:1fr;gap:22px}
+ .contact-section{padding:34px 6%}
+ footer{gap:12px;padding:20px 0;flex-wrap:wrap}
+ footer>span{font-size:9px}
+}
