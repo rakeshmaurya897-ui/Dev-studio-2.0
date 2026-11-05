@@ -367,3 +367,16 @@ button,.btn,.nav a,.arrow-link,.product-card a,.under-link,.whatsapp-float{touch
 .btn:hover,.nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 20px #20251f20}
 @media(max-width:600px){.welcome-toast{padding:14px;border-radius:12px}.welcome-toast p{font-size:12px}.welcome-toast-note{font-size:9px}.motion-ready .motion-reveal{transform:translateY(16px)}.service-card:hover,.product-card:hover,.project-card:hover,.tile:hover{transform:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.motion-ready .motion-reveal{opacity:1!important;transform:none!important}}
+/* VISIBLE WELCOME INTRO V2 */
+.welcome-overlay{position:fixed;inset:0;z-index:5000;display:grid;place-items:center;padding:22px;background:#111b;backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);animation:overlayIn .35s ease both}
+.welcome-panel{position:relative;width:min(480px,100%);padding:34px 30px 28px;background:#f7f8f2;color:#20251f;border:1px solid #d5dcc9;border-radius:18px;box-shadow:0 28px 90px #0005;text-align:left;animation:panelIn .55s cubic-bezier(.2,.8,.2,1) both}
+.welcome-panel:before{content:"";position:absolute;top:0;left:28px;right:28px;height:4px;background:#d7f36a;border-radius:0 0 5px 5px}
+.welcome-panel .welcome-kicker{font:700 10px 'DM Mono',monospace;letter-spacing:.16em;color:#617c2b}
+.welcome-panel h2{font:800 clamp(27px,6vw,38px)/1.05 Manrope,Arial,sans-serif;letter-spacing:-.055em;margin:16px 0 10px;color:#20251f}
+.welcome-panel p{font:15px/1.7 Manrope,Arial,sans-serif;color:#51594b;margin:0 0 22px}
+.welcome-panel .welcome-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.welcome-panel .welcome-explore{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 19px;background:#20251f;color:#f7f8f2;border-radius:7px;text-decoration:none;font:800 13px Manrope,Arial,sans-serif}
+.welcome-panel .welcome-dismiss{min-height:44px;padding:0 12px;border:0;background:transparent;color:#51594b;font:700 12px Manrope,Arial,sans-serif;cursor:pointer}
+@keyframes overlayIn{from{opacity:0}to{opacity:1}}
+@keyframes panelIn{from{opacity:0;transform:translateY(22px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(max-width:600px){.welcome-panel{padding:30px 22px 23px;border-radius:14px}.welcome-panel p{font-size:14px}}

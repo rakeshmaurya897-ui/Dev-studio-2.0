@@ -44,7 +44,19 @@
 .btn,.nav-cta,.whatsapp-float{transition:transform .22s ease,box-shadow .22s ease,background .22s ease}
 .btn:hover,.nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 20px #20251f20}
 @media(max-width:600px){.welcome-toast{padding:14px;border-radius:12px}.welcome-toast p{font-size:12px}.welcome-toast-note{font-size:9px}.motion-ready .motion-reveal{transform:translateY(16px)}.service-card:hover,.product-card:hover,.project-card:hover,.tile:hover{transform:none}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.motion-ready .motion-reveal{opacity:1!important;transform:none!important}}</style></head><body><div class="wrap">
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.motion-ready .motion-reveal{opacity:1!important;transform:none!important}}</style><style>/* VISIBLE WELCOME INTRO V2 */
+.welcome-overlay{position:fixed;inset:0;z-index:5000;display:grid;place-items:center;padding:22px;background:#111b;backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);animation:overlayIn .35s ease both}
+.welcome-panel{position:relative;width:min(480px,100%);padding:34px 30px 28px;background:#f7f8f2;color:#20251f;border:1px solid #d5dcc9;border-radius:18px;box-shadow:0 28px 90px #0005;text-align:left;animation:panelIn .55s cubic-bezier(.2,.8,.2,1) both}
+.welcome-panel:before{content:"";position:absolute;top:0;left:28px;right:28px;height:4px;background:#d7f36a;border-radius:0 0 5px 5px}
+.welcome-panel .welcome-kicker{font:700 10px 'DM Mono',monospace;letter-spacing:.16em;color:#617c2b}
+.welcome-panel h2{font:800 clamp(27px,6vw,38px)/1.05 Manrope,Arial,sans-serif;letter-spacing:-.055em;margin:16px 0 10px;color:#20251f}
+.welcome-panel p{font:15px/1.7 Manrope,Arial,sans-serif;color:#51594b;margin:0 0 22px}
+.welcome-panel .welcome-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.welcome-panel .welcome-explore{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 19px;background:#20251f;color:#f7f8f2;border-radius:7px;text-decoration:none;font:800 13px Manrope,Arial,sans-serif}
+.welcome-panel .welcome-dismiss{min-height:44px;padding:0 12px;border:0;background:transparent;color:#51594b;font:700 12px Manrope,Arial,sans-serif;cursor:pointer}
+@keyframes overlayIn{from{opacity:0}to{opacity:1}}
+@keyframes panelIn{from{opacity:0;transform:translateY(22px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(max-width:600px){.welcome-panel{padding:30px 22px 23px;border-radius:14px}.welcome-panel p{font-size:14px}}</style></head><body><div class="wrap">
 <header><a class="brand" href="/">DEVSTUDIO LIVE<small>DIGITAL PRODUCTS</small></a><nav><a href="/">Home</a><a href="#features">Workbook</a><a href="#faq">FAQs</a></nav></header><main>
 <section class="hero"><div><div class="kicker">FOOD TRUCK EVENT PLANNING / SPREADSHEET</div><h1>Know your event numbers <span style="color:#78933d">before you book.</span></h1><p class="lead">Estimate sales, costs, profit and break-even orders with the Food Truck Event Profit Calculator --- an editable Excel workbook for food truck owners, market traders and pop-up food vendors.</p><div class="actions"><a class="btn" href="https://rakeshmaurya2.gumroad.com/l/food-truck-profit-calculator" target="_blank" rel="noopener noreferrer">Get the spreadsheet --- $9 <span>---</span></a><a class="secondary" href="#features">See what's included ---</a></div></div><div class="visual"><img src="https://d2ol7oe51mr4n9.cloudfront.net/user_38zAigGzse1tI2SqkWycVgobIh5/935f510b-9551-4a25-a17a-2aabb7303cf2.png" alt="Food Truck Event Profit Calculator cover showing Excel and Google Sheets compatibility, event profit calculator, break-even analysis, menu profit margin and event cost planning" width="1536" height="864" fetchpriority="high"></div></section>
 <section class="content" id="features"><div class="kicker">01 / WHAT'S INSIDE</div><h2>One workbook. Four useful <em>tabs.</em></h2><p class="copy">Use your own assumptions to build an event estimate, cost menu items and review the key numbers. The workbook is designed as an .xlsx file for Microsoft Excel; it can also be imported into Google Sheets, where you should verify formulas and formatting.</p><div class="grid">
@@ -64,28 +76,29 @@
 <details><summary>Does it automatically compare multiple events or currencies?</summary><p>No. You can change inputs and record separate estimates yourself. The currency code is a label only; the workbook does not perform currency conversion or provide an automated multi-event comparison tool.</p></details>
 <details><summary>Will it guarantee that my event makes a profit?</summary><p>No. It calculates estimates from your assumptions. Actual sales, costs, weather, footfall, venue rules and other factors can differ.</p></details>
 <details><summary>Where do I buy it?</summary><p>Use the purchase links on this page. Gumroad handles checkout and digital delivery; check the product page for current terms and payment options.</p></details></section>
-<section class="content"><div class="kicker">MORE FROM DEVSTUDIO LIVE</div><h2>Planning a visit to Kashi?</h2><p class="copy">Explore <a href="/her-sacred-kashi/">Her Sacred Kashi</a>, a 27-page English travel guide for women planning an independent visit to Varanasi.</p></section></main><footer><span>-- 2026 DevStudio Live</span><a href="/">Back to DevStudio Live</a><span>Digital products</span></footer></div><a class="whatsapp-float" href="https://wa.me/919235727927?text=Hello%20DevStudio%20Live%2C%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" aria-label="Chat with DevStudio Live on WhatsApp"><span class="whatsapp-icon" aria-hidden="true">☏</span><span class="whatsapp-label">Chat on WhatsApp</span></a><script>/* Welcome + scroll reveal: lightweight, session-limited, accessible */
+<section class="content"><div class="kicker">MORE FROM DEVSTUDIO LIVE</div><h2>Planning a visit to Kashi?</h2><p class="copy">Explore <a href="/her-sacred-kashi/">Her Sacred Kashi</a>, a 27-page English travel guide for women planning an independent visit to Varanasi.</p></section></main><footer><span>-- 2026 DevStudio Live</span><a href="/">Back to DevStudio Live</a><span>Digital products</span></footer></div><a class="whatsapp-float" href="https://wa.me/919235727927?text=Hello%20DevStudio%20Live%2C%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" aria-label="Chat with DevStudio Live on WhatsApp"><span class="whatsapp-icon" aria-hidden="true">☏</span><span class="whatsapp-label">Chat on WhatsApp</span></a><script>/* Welcome + scroll reveal V2 */
 (()=>{
  const reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
- const pageKey='devstudio-welcome-seen';
  const isHome=location.pathname==='/'||location.pathname.endsWith('/index.html');
  const title=isHome?'Welcome to DevStudio Live':'Welcome to '+(document.title.split('|')[0].trim()||'DevStudio Live');
- const message=isHome?'We create thoughtful websites, digital tools and marketing experiences. Take a look around.':(location.pathname.includes('food-truck')?'Explore the calculator and see how it can help plan event costs and profit.':'Explore the Her Sacred Kashi guide and review what is included.');
+ const message=isHome?'Explore our websites, digital products and practical marketing services. We are glad you are here.':(location.pathname.includes('food-truck')?'Explore the Food Truck Event Profit Calculator and see what is included in the workbook.':'Explore Her Sacred Kashi and review the guide details before purchasing.');
  const target=isHome?'#services':(location.pathname.includes('food-truck')?'#features':'#about');
+ const key='devstudio-welcome-v2';
  try{
-   if(!sessionStorage.getItem(pageKey)){
-     const toast=document.createElement('aside');
-     toast.className='welcome-toast';toast.setAttribute('role','status');toast.setAttribute('aria-live','polite');
-     toast.innerHTML='<div class="welcome-toast-top"><span class="welcome-toast-brand">DEVSTUDIO LIVE / NAMASTE</span><button class="welcome-toast-close" type="button" aria-label="Close welcome message">×</button></div><h2></h2><p></p><div class="welcome-toast-actions"><a class="welcome-toast-link" href="'+target+'">Explore website ↗</a><span class="welcome-toast-note">GOOD TO HAVE YOU HERE</span></div>';
-     toast.querySelector('h2').textContent=title;toast.querySelector('p').textContent=message;
-     document.body.appendChild(toast);
-     const close=()=>{toast.classList.add('is-leaving');setTimeout(()=>toast.remove(),380)};
-     toast.querySelector('button').addEventListener('click',close);
-     toast.querySelector('a').addEventListener('click',close);
-     sessionStorage.setItem(pageKey,'1');
-     window.setTimeout(()=>{if(toast.isConnected)close()},6500);
+   const last=Number(localStorage.getItem(key)||0);
+   if(Date.now()-last>86400000){
+     const overlay=document.createElement('div');
+     overlay.className='welcome-overlay';
+     overlay.innerHTML='<section class="welcome-panel" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle"><div class="welcome-kicker">DEVSTUDIO LIVE / NAMASTE</div><h2 id="welcomeTitle"></h2><p></p><div class="welcome-actions"><a class="welcome-explore" href="'+target+'">Explore website ↗</a><button class="welcome-dismiss" type="button">Maybe later</button></div></section>';
+     overlay.querySelector('h2').textContent=title;
+     overlay.querySelector('p').textContent=message;
+     document.body.appendChild(overlay);
+     const close=()=>{overlay.style.opacity='0';setTimeout(()=>overlay.remove(),220);try{localStorage.setItem(key,String(Date.now()))}catch(e){}};
+     overlay.querySelector('button').addEventListener('click',close);
+     overlay.querySelector('a').addEventListener('click',()=>{try{localStorage.setItem(key,String(Date.now()))}catch(e){}});
+     overlay.addEventListener('click',e=>{if(e.target===overlay)close()});
    }
- }catch(e){/* storage may be unavailable; do not block page rendering */}
+ }catch(e){/* storage unavailable; do not block the website */}
  const selectors=isHome?'.hero-copy,.hero-visual,.trust-strip > div,.service-card,.product-card,.project-card,.process-intro,.steps article,.price-card,.faqs details,.contact-copy,.contact-form': 'main .hero > div, main section.content, main .tile, main .buy, main .faq details';
  const items=[...document.querySelectorAll(selectors)];
  items.forEach((el,i)=>{el.classList.add('motion-reveal');el.dataset.delay=String(i%4)});
