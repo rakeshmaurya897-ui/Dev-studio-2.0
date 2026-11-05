@@ -203,3 +203,134 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .whatsapp-icon{width:25px;height:25px;display:grid;place-items:center;border:1.5px solid #ffffffb8;border-radius:50%;font-size:17px;line-height:1}
 .whatsapp-label{white-space:nowrap}
 @media(max-width:600px){.whatsapp-float{right:14px;bottom:14px;padding:11px 14px;font-size:12px}.whatsapp-icon{width:23px;height:23px}}
+/* MOBILE-FIRST REFINEMENT 2026 */
+html{width:100%;overflow-x:clip;scroll-padding-top:76px}
+body{width:100%;overflow-x:clip;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+img,svg,video,canvas{max-width:100%;height:auto}
+button,a,input,select,textarea{-webkit-tap-highlight-color:transparent}
+button,.btn,.nav a,.arrow-link,.product-card a,.under-link,.whatsapp-float{touch-action:manipulation}
+.site-shell{width:100%;max-width:1240px}
+.header{position:relative;z-index:30}
+.menu-toggle{width:46px;height:46px;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:10px;color:var(--ink);cursor:pointer}
+.nav a{min-height:44px;display:flex;align-items:center}
+.hero-copy,.hero-visual,.section-head,.service-card,.product-card,.project-card,.process-intro,.steps,.price-card,.faq-section>div,.contact-copy,.contact-form{min-width:0}
+.hero h1,.section-head h2,.process-intro h2,.faq-section h2,.contact-copy h2{overflow-wrap:normal;word-break:normal}
+.hero-lead,.section-head>p,.service-card>p,.product-card p,.project-meta p,.steps p,.price-main>p,.price-includes small,.faqs p,.contact-copy>p,.contact-form small{overflow-wrap:anywhere}
+.btn{min-height:48px}
+.contact-form input,.contact-form select,.contact-form textarea{min-height:48px;border-radius:8px}
+.contact-form textarea{min-height:112px}
+.whatsapp-float{bottom:max(16px,env(safe-area-inset-bottom));right:max(16px,env(safe-area-inset-right));min-height:50px;padding:10px 16px}
+@media(max-width:900px){
+ .site-shell{padding-left:5%;padding-right:5%}
+ .header{height:70px}
+ .menu-toggle{display:flex}
+ .nav{display:none;position:absolute;top:calc(100% + 1px);left:0;right:0;z-index:50;padding:14px 5% 20px;background:#f7f8f4;border:1px solid var(--line);border-top:0;box-shadow:0 14px 28px #20231e18;flex-direction:column;align-items:stretch;gap:4px}
+ .nav.open{display:flex}
+ .nav a{padding:10px 12px;border-radius:8px}
+ .nav a:hover{background:#e9eddf}
+ .nav .nav-cta{justify-content:center;margin-top:6px}
+ .hero{grid-template-columns:1fr;gap:30px;padding:46px 0}
+ .hero-copy{max-width:720px}
+ .hero-visual{width:100%;max-width:650px;margin:0 auto}
+ .trust-strip{display:grid;grid-template-columns:1fr 1fr;gap:12px 18px}
+ .trust-strip>span{grid-column:1/-1}
+ .section-head{align-items:flex-start}
+ .section-head>p{max-width:440px}
+ .service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .process-section{grid-template-columns:1fr;gap:24px}
+ .contact-section{grid-template-columns:1fr;gap:28px}
+}
+@media(max-width:600px){
+ html{scroll-padding-top:68px}
+ .site-shell{padding-left:18px;padding-right:18px}
+ .header{height:66px}
+ .logo{font-size:12px;gap:8px}
+ .logo-mark{width:31px;height:31px}
+ .logo small{font-size:8px}
+ .menu-toggle{width:44px;height:44px;font-size:21px}
+ .nav{padding:12px 18px 18px}
+ .nav a{font-size:15px;min-height:46px}
+ .hero{padding:34px 0 38px;gap:24px}
+ .eyebrow{font-size:9px;letter-spacing:.08em;line-height:1.5}
+ .hero h1{font-size:clamp(40px,11.5vw,58px);line-height:1.02;letter-spacing:-.055em;margin:17px 0}
+ .hero-lead{font-size:15px;line-height:1.75}
+ .hero-actions{align-items:stretch;gap:14px;flex-direction:column}
+ .hero-actions .btn{width:100%;justify-content:space-between}
+ .under-link{align-self:flex-start;font-size:13px}
+ .hero-foot{gap:7px;flex-wrap:wrap;margin-top:24px;font-size:8px}
+ .hero-visual{height:260px;min-height:260px;padding:10px;border-radius:10px}
+ .visual-top,.visual-bottom{left:12px;right:12px;font-size:7px;letter-spacing:.06em}
+ .visual-top{top:13px}.visual-bottom{bottom:12px}
+ .orb{width:205px;height:205px}.orb-two{width:235px;height:235px}
+ .card-back{width:155px;height:174px;right:6%;top:18%;padding:14px}
+ .card-back strong{font-size:23px}
+ .card-front{width:170px;height:182px;left:6%;bottom:13%;padding:12px}
+ .mini-window{height:25px}
+ .chart{height:65px;gap:6px;padding:9px 5px}
+ .card-caption{padding-top:12px}
+ .card-caption span{font-size:19px}
+ .floating-stamp{width:56px;height:56px;right:3%;bottom:10%;font-size:7px}
+ .floating-stamp b{font-size:15px}
+ .trust-strip{grid-template-columns:1fr;gap:9px;padding:16px 0;font-size:12px}
+ .trust-strip>span{font-size:9px}
+ .section,.products-section,.work-section,.pricing-section{padding:52px 0}
+ .section-head{display:block;margin-bottom:24px}
+ .section-head h2,.process-intro h2,.faq-section h2,.contact-copy h2{font-size:clamp(34px,9vw,40px);line-height:1.06}
+ .section-head>p{font-size:14px;line-height:1.7;margin:14px 0 0}
+ .service-grid,.product-grid,.project-grid{grid-template-columns:minmax(0,1fr);gap:12px}
+ .service-card{padding:21px;min-height:0}
+ .service-card h3{font-size:20px;margin:16px 0 8px}
+ .service-card>p,.product-card p{font-size:14px;line-height:1.7}
+ .tags{gap:6px}
+ .tags span{font-size:10px}
+ .arrow-link{display:inline-flex;align-items:center;min-height:44px;padding-top:12px}
+ .product-card{padding:21px;min-height:0}
+ .product-card h3{font-size:21px;margin:14px 0 5px}
+ .product-card a{display:inline-flex;align-items:center;min-height:44px;padding-top:8px}
+ .project-grid{gap:18px}
+ .project-art{height:175px}
+ .project-meta{padding:13px 2px 3px}
+ .project-meta h3{font-size:17px}
+ .project-meta p{font-size:13px;line-height:1.65}
+ .process-section{padding:32px 20px;border-radius:10px}
+ .process-intro>p,.steps p{font-size:14px;line-height:1.7}
+ .steps article{grid-template-columns:34px minmax(0,1fr);gap:12px;padding:16px 0}
+ .steps h3{font-size:17px}
+ .price-card{grid-template-columns:minmax(0,1fr)}
+ .price-main,.price-includes{padding:22px}
+ .price{font-size:clamp(38px,11vw,46px)}
+ .price-main>p,.price-includes li{font-size:14px;line-height:1.7}
+ .price-includes{border-left:0;border-top:1px solid var(--line)}
+ .custom-note{display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:17px 0}
+ .custom-note a{margin:0;min-height:40px;display:flex;align-items:center}
+ .faq-section{grid-template-columns:minmax(0,1fr);gap:18px;padding:52px 0}
+ .faqs summary{font-size:14px;gap:12px}
+ .faqs p{font-size:13px;line-height:1.7}
+ .contact-section{grid-template-columns:minmax(0,1fr);padding:28px 20px;gap:24px;margin-bottom:38px;border-radius:10px}
+ .contact-copy>p{font-size:14px;line-height:1.7}
+ .contact-email{font-size:14px;overflow-wrap:anywhere}
+ .contact-location{font-size:8px;line-height:1.8;margin-top:22px}
+ .contact-form{gap:12px}
+ .contact-form label{font-size:12px}
+ .contact-form input,.contact-form select,.contact-form textarea{font-size:16px;min-height:48px;padding:12px;border-radius:7px}
+ .contact-form .btn{width:100%;justify-content:space-between}
+ .contact-form small{font-size:11px}
+ footer{display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding:18px 0 24px}
+ footer>span{font-size:8px;line-height:1.6}
+ .footer-logo{width:auto}
+ .whatsapp-float{right:12px;bottom:max(12px,env(safe-area-inset-bottom));min-height:48px;padding:9px 13px;gap:8px}
+ .whatsapp-label{font-size:12px}
+}
+@media(max-width:360px){
+ .site-shell{padding-left:14px;padding-right:14px}
+ .hero h1{font-size:40px}
+ .hero-visual{height:235px;min-height:235px}
+ .card-front{width:150px;height:165px}
+ .card-back{width:138px;height:158px}
+ .card-back strong{font-size:21px}
+ .chart{height:56px}
+ .floating-stamp{width:49px;height:49px}
+ .section-head h2,.process-intro h2,.faq-section h2,.contact-copy h2{font-size:33px}
+ .contact-section{padding:24px 16px}
+}
