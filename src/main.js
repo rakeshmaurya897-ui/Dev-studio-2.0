@@ -36,3 +36,34 @@ document.querySelector('#contactForm').addEventListener('submit',event=>{
  document.querySelector('#formStatus').textContent='Your email app should open with the enquiry ready to send.'
  window.location.href='mailto:'+email+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body)
 })
+/* Welcome + scroll reveal: lightweight, session-limited, accessible */
+(()=>{
+ const reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const pageKey='devstudio-welcome-seen';
+ const isHome=location.pathname==='/'||location.pathname.endsWith('/index.html');
+ const title=isHome?'Welcome to DevStudio Live':'Welcome to '+(document.title.split('|')[0].trim()||'DevStudio Live');
+ const message=isHome?'We create thoughtful websites, digital tools and marketing experiences. Take a look around.':(location.pathname.includes('food-truck')?'Explore the calculator and see how it can help plan event costs and profit.':'Explore the Her Sacred Kashi guide and review what is included.');
+ const target=isHome?'#services':(location.pathname.includes('food-truck')?'#features':'#about');
+ try{
+   if(!sessionStorage.getItem(pageKey)){
+     const toast=document.createElement('aside');
+     toast.className='welcome-toast';toast.setAttribute('role','status');toast.setAttribute('aria-live','polite');
+     toast.innerHTML='<div class="welcome-toast-top"><span class="welcome-toast-brand">DEVSTUDIO LIVE / NAMASTE</span><button class="welcome-toast-close" type="button" aria-label="Close welcome message">×</button></div><h2></h2><p></p><div class="welcome-toast-actions"><a class="welcome-toast-link" href="'+target+'">Explore website ↗</a><span class="welcome-toast-note">GOOD TO HAVE YOU HERE</span></div>';
+     toast.querySelector('h2').textContent=title;toast.querySelector('p').textContent=message;
+     document.body.appendChild(toast);
+     const close=()=>{toast.classList.add('is-leaving');setTimeout(()=>toast.remove(),380)};
+     toast.querySelector('button').addEventListener('click',close);
+     toast.querySelector('a').addEventListener('click',close);
+     sessionStorage.setItem(pageKey,'1');
+     window.setTimeout(()=>{if(toast.isConnected)close()},6500);
+   }
+ }catch(e){/* storage may be unavailable; do not block page rendering */}
+ const selectors=isHome?'.hero-copy,.hero-visual,.trust-strip > div,.service-card,.product-card,.project-card,.process-intro,.steps article,.price-card,.faqs details,.contact-copy,.contact-form': 'main .hero > div, main section.content, main .tile, main .buy, main .faq details';
+ const items=[...document.querySelectorAll(selectors)];
+ items.forEach((el,i)=>{el.classList.add('motion-reveal');el.dataset.delay=String(i%4)});
+ if(!reduced&&'IntersectionObserver' in window){
+   document.documentElement.classList.add('motion-ready');
+   const io=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');io.unobserve(entry.target)}}),{threshold:.12,rootMargin:'0px 0px -35px 0px'});
+   items.forEach(el=>io.observe(el));
+ }else items.forEach(el=>el.classList.add('is-visible'));
+})();

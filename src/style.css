@@ -334,3 +334,36 @@ button,.btn,.nav a,.arrow-link,.product-card a,.under-link,.whatsapp-float{touch
  .section-head h2,.process-intro h2,.faq-section h2,.contact-copy h2{font-size:33px}
  .contact-section{padding:24px 16px}
 }
+/* PREMIUM MOTION SYSTEM */
+:root{scroll-behavior:smooth}
+@keyframes welcomeIn{from{opacity:0;transform:translate(-50%,-18px) scale(.97)}to{opacity:1;transform:translate(-50%,0) scale(1)}}
+@keyframes welcomeOut{to{opacity:0;transform:translate(-50%,-12px) scale(.98)}}
+@keyframes heroRise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes visualDrift{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes orbitSpin{to{transform:rotate(360deg)}}
+.welcome-toast{position:fixed;z-index:2000;top:max(16px,env(safe-area-inset-top));left:50%;width:min(520px,calc(100% - 28px));padding:17px 18px 16px;background:#20271e;color:#f7f8f4;border:1px solid #65734b;border-radius:15px;box-shadow:0 18px 55px #1118;animation:welcomeIn .55s cubic-bezier(.2,.8,.2,1) both}
+.welcome-toast.is-leaving{animation:welcomeOut .35s ease forwards}
+.welcome-toast-top{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.welcome-toast-brand{font:700 10px 'DM Mono',monospace;letter-spacing:.16em;color:#d7f36a}
+.welcome-toast-close{width:34px;height:34px;border:1px solid #ffffff40;border-radius:50%;background:transparent;color:#fff;font-size:20px;cursor:pointer}
+.welcome-toast h2{font:700 clamp(19px,4vw,23px) Manrope,Arial,sans-serif;letter-spacing:-.04em;line-height:1.2;margin:8px 0 5px;color:#fff}
+.welcome-toast p{font:13px/1.55 Manrope,Arial,sans-serif;color:#d4dacb;margin:0 0 12px}
+.welcome-toast-actions{display:flex;align-items:center;gap:14px}
+.welcome-toast-link{display:inline-flex;align-items:center;justify-content:center;min-height:39px;padding:0 14px;border-radius:7px;background:#d7f36a;color:#20251f;text-decoration:none;font:800 12px Manrope,Arial,sans-serif}
+.welcome-toast-note{font:10px 'DM Mono',monospace;color:#aeb99b}
+.motion-ready .motion-reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.motion-ready .motion-reveal.is-visible{opacity:1;transform:translateY(0)}
+.motion-ready .motion-reveal[data-delay="1"]{transition-delay:.09s}
+.motion-ready .motion-reveal[data-delay="2"]{transition-delay:.18s}
+.motion-ready .motion-reveal[data-delay="3"]{transition-delay:.27s}
+.hero-copy>*{animation:heroRise .7s both}
+.hero-copy>*:nth-child(2){animation-delay:.08s}.hero-copy>*:nth-child(3){animation-delay:.16s}.hero-copy>*:nth-child(4){animation-delay:.24s}
+.hero-visual,.visual,.art{animation:heroRise .85s .12s both}
+.visual img{animation:visualDrift 6s ease-in-out infinite}
+.art:after{animation:orbitSpin 38s linear infinite}
+.service-card,.product-card,.project-card,.tile,.buy,.price-card{transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease}
+.service-card:hover,.product-card:hover,.project-card:hover,.tile:hover{transform:translateY(-5px);box-shadow:0 15px 35px #20251f12}
+.btn,.nav-cta,.whatsapp-float{transition:transform .22s ease,box-shadow .22s ease,background .22s ease}
+.btn:hover,.nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 20px #20251f20}
+@media(max-width:600px){.welcome-toast{padding:14px;border-radius:12px}.welcome-toast p{font-size:12px}.welcome-toast-note{font-size:9px}.motion-ready .motion-reveal{transform:translateY(16px)}.service-card:hover,.product-card:hover,.project-card:hover,.tile:hover{transform:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.motion-ready .motion-reveal{opacity:1!important;transform:none!important}}
