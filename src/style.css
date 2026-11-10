@@ -599,3 +599,78 @@ footer{border-top:1px solid #17171435;color:#625d54}
 .welcome-overlay{display:none!important}
 @media(max-width:900px){.hero{grid-template-columns:1fr;min-height:0;padding:55px 0}.hero-visual{height:420px;max-width:680px;width:100%;margin:auto}.service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.site-shell{padding:0 18px}.header{height:70px}.nav{background:#eeeae1;border-color:#17171430}.nav a{color:#171714}.nav a:hover{background:#ded7ca}.hero{padding:40px 0;gap:26px}.hero h1{font-size:clamp(58px,15vw,78px)}.hero-index{margin-top:25px;font-size:8px}.hero-lead{font-size:15px}.hero-visual{height:300px;min-height:300px}.hero-visual:before{width:72%;left:14%;top:14%}.hero-visual:after{font-size:250px}.stage-caption{left:17px;bottom:43px}.stage-index{right:17px;top:45px}.editorial-visual .visual-top,.editorial-visual .visual-bottom{left:16px;right:16px;font-size:7px}.trust-strip{background:transparent}.service-grid,.product-grid,.project-grid{grid-template-columns:1fr}.service-card,.product-card{padding:23px;min-height:0}.section,.work-section,.pricing-section,.products-section{padding:62px 0}.section-head h2,.process-intro h2,.faq-section h2,.contact-copy h2{font-size:clamp(38px,11vw,48px)}.process-section{padding:36px 22px}.price-main,.price-includes{padding:23px}.contact-section{padding:34px 22px}.welcome-overlay{display:none!important}}
+
+
+/* CUSTOMER CLARITY PASS — plain-language hierarchy and enquiry usability */
+.hero{min-height:0;padding:72px 0 58px;align-items:center}
+.hero h1{font-size:clamp(50px,5.5vw,78px);line-height:.94;letter-spacing:-.075em;max-width:680px}
+.hero-lead{max-width:520px;font-size:16px;line-height:1.8;color:#4f4a42}
+.hero-foot{gap:10px;flex-wrap:wrap}
+.hero-visual:before,.hero-visual:after{content:none!important;display:none!important}
+.hero-visual{height:430px;background:#d9d2c5;display:flex;align-items:center;justify-content:center;padding:42px 18px;overflow:hidden}
+.site-preview{position:relative;z-index:2;width:min(84%,470px);min-height:320px;background:#f7f4ed;border:1px solid #8e8578;box-shadow:12px 12px 0 #a64f2b;display:flex;flex-direction:column;color:#171714}
+.preview-browser{height:38px;display:flex;align-items:center;gap:12px;padding:0 14px;border-bottom:1px solid #c9c2b5;font:8px 'DM Mono',monospace;letter-spacing:.06em;white-space:nowrap}
+.browser-dots{font-size:8px;letter-spacing:1px;color:#a64f2b}
+.preview-browser b{font-weight:500;color:#171714}
+.preview-menu{margin-left:auto;color:#777168;font-size:7px}
+.preview-content{padding:30px 30px 23px;display:flex;flex-direction:column;align-items:flex-start}
+.preview-kicker{font:9px 'DM Mono',monospace;letter-spacing:.12em;color:#a64f2b;margin-bottom:15px}
+.preview-content strong{font:600 clamp(30px,3.1vw,42px)/.98 Manrope,Arial,sans-serif;letter-spacing:-.075em;color:#171714}
+.preview-content p{max-width:300px;margin:13px 0 17px;font-size:11px;line-height:1.6;color:#5b574f}
+.preview-button{display:inline-block;padding:10px 12px;background:#171714;color:#f7f4ed;font:8px 'DM Mono',monospace;letter-spacing:.06em}
+.preview-footer{margin-top:auto;padding:13px 16px;border-top:1px solid #c9c2b5;display:flex;justify-content:space-between;gap:8px;font:8px 'DM Mono',monospace;color:#70695f}
+.editorial-visual .visual-top,.editorial-visual .visual-bottom{left:18px;right:18px;font-size:8px}
+.trust-strip{display:flex;gap:14px;align-items:center;justify-content:space-between;padding:18px 0;flex-wrap:wrap}
+.trust-strip>span{flex:1 1 100%;font-size:9px}
+.trust-strip div{flex:1 1 180px;font-size:12px;line-height:1.5}
+.services .section-head h2{max-width:560px}
+.service-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.service-card{min-height:330px;padding:25px 23px}
+.service-card h3{font-size:21px;line-height:1.2}
+.service-card>p{font-size:13px;line-height:1.75}
+.tags{gap:6px}
+.tags span{font-size:9px;padding:5px 7px}
+.arrow-link{font-size:11px}
+.products-section .section-head>p{max-width:450px}
+.product-card p{font-size:13px;line-height:1.75}
+.project-meta p{font-size:12px;line-height:1.7}
+.contact-form .btn{min-width:210px}
+.contact-form small{font-size:11px;line-height:1.65;max-width:460px}
+.whatsapp-float{position:fixed;z-index:50;right:22px;bottom:20px;display:flex;align-items:center;gap:10px;padding:12px 17px;background:#18794e;color:#fff;text-decoration:none;border:1px solid #0f603b;border-radius:30px;box-shadow:0 8px 24px #17171435;font:600 12px Manrope,Arial,sans-serif}
+.whatsapp-float:hover{background:#12633f;transform:translateY(-2px)}
+.whatsapp-icon{font-size:17px;line-height:1}
+.whatsapp-label{white-space:nowrap}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #a64f2b;outline-offset:3px}
+@media(max-width:900px){
+ .hero{grid-template-columns:1fr;gap:30px;padding:52px 0 42px}
+ .hero-copy{max-width:720px}
+ .hero-visual{height:390px;max-width:720px;width:100%;margin:0 auto}
+ .service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .service-card{min-height:315px}
+}
+@media(max-width:700px){
+ .hero{padding:40px 0 34px;gap:24px}
+ .hero h1{font-size:clamp(42px,11.2vw,55px);line-height:.98;letter-spacing:-.07em;margin:20px 0}
+ .hero-lead{font-size:15px;line-height:1.7}
+ .hero-actions{align-items:flex-start;gap:15px;flex-direction:column}
+ .hero-foot{margin-top:25px;font-size:9px}
+ .hero-visual{height:300px;min-height:300px;padding:30px 10px}
+ .site-preview{width:86%;min-height:205px;box-shadow:7px 7px 0 #a64f2b}
+ .preview-browser{height:30px;padding:0 9px;gap:8px;font-size:7px}
+ .preview-menu{display:none}
+ .preview-content{padding:18px 18px 14px}
+ .preview-kicker{font-size:7px;margin-bottom:9px}
+ .preview-content strong{font-size:29px}
+ .preview-content p{font-size:9px;line-height:1.45;margin:8px 0 10px;max-width:260px}
+ .preview-button{font-size:7px;padding:8px 9px}
+ .preview-footer{padding:9px 10px;font-size:7px}
+ .editorial-visual .visual-top,.editorial-visual .visual-bottom{left:12px;right:12px;font-size:6px}
+ .trust-strip{gap:9px;align-items:flex-start}
+ .trust-strip div{flex:1 1 100%;font-size:12px}
+ .service-grid{grid-template-columns:1fr}
+ .service-card{min-height:0;padding:23px}
+ .service-card h3{font-size:20px}
+ .products-section .section-head>p{font-size:14px}
+ .whatsapp-float{right:12px;bottom:12px;padding:11px 14px;font-size:11px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.whatsapp-float:hover{transform:none}}
