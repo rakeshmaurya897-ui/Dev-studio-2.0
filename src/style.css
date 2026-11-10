@@ -674,3 +674,58 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
  .whatsapp-float{right:12px;bottom:12px;padding:11px 14px;font-size:11px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.whatsapp-float:hover{transform:none}}
+
+
+/* PREMIUM SCOPE + TYPE PASS */
+.header{position:sticky;top:0;z-index:40;background:#eeeae1ed;backdrop-filter:blur(14px);border-bottom:1px solid #17171418}
+.logo{letter-spacing:.035em}
+.nav a{font-weight:600;letter-spacing:.01em}
+.hero{padding-top:84px;padding-bottom:70px}
+.hero h1{font-size:clamp(58px,6.4vw,92px);line-height:.91;letter-spacing:-.085em;max-width:720px}
+.hero-lead{font-size:17px;line-height:1.78;max-width:540px;color:#39352f}
+.hero-actions .btn{min-height:54px;padding:0 24px}
+.section,.work-section,.products-section{padding-top:100px;padding-bottom:100px}
+.section-head{margin-bottom:38px;align-items:end}
+.section-head h2,.process-intro h2,.faq-section h2,.contact-copy h2,.scope-copy h2{letter-spacing:-.075em;line-height:.98}
+.service-grid{gap:14px}
+.service-card{background:#e6e0d5;border:1px solid #17171426;padding:30px 27px;min-height:350px;display:flex;flex-direction:column;transition:transform .25s ease,background .25s ease}
+.service-card:hover{transform:translateY(-5px);background:#f6f2e9}
+.service-card h3{font-size:clamp(21px,2vw,27px);letter-spacing:-.055em;max-width:260px}
+.service-card>p{font-size:13px;line-height:1.8;color:#514b42}
+.service-card .tags{margin-top:auto;padding-top:18px}
+.service-card .arrow-link{margin-top:20px}
+.products-section{background:#1b1a17;color:#f2eee5;padding-left:clamp(22px,6vw,80px);padding-right:clamp(22px,6vw,80px)}
+.products-section .section-head>p{color:#c6bfb3}
+.product-card{background:#282620;border:1px solid #ffffff2c;padding:32px;min-height:270px}
+.product-card h3{font-size:clamp(23px,2.2vw,30px);letter-spacing:-.05em}
+.product-card p{color:#d0c9bc;line-height:1.75}
+.product-card a{color:#e7b88d}
+.work-section{padding-top:100px;padding-bottom:100px}
+.project-card{border:1px solid #17171425;background:#e7e1d7}
+.project-art{min-height:270px}
+.project-meta{padding:22px 23px 25px}
+.process-section{padding:clamp(32px,6vw,80px);background:#dcd5c9}
+.process-intro p{max-width:460px;line-height:1.8}
+.steps article{border-top:1px solid #17171435;padding:22px 0}
+.scope-section{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,7vw,100px);padding:100px 0;border-top:1px solid #17171430;border-bottom:1px solid #17171430}
+.scope-copy h2{font-size:clamp(42px,5vw,66px);margin:22px 0}
+.scope-copy>p{max-width:470px;font-size:15px;line-height:1.85;color:#514b42;margin-bottom:28px}
+.scope-points article{display:grid;grid-template-columns:42px 1fr;gap:18px;padding:22px 0;border-bottom:1px solid #17171430}
+.scope-points article:first-child{border-top:1px solid #17171430}
+.scope-points article>b{font:11px 'DM Mono',monospace;color:#a64f2b;padding-top:4px}
+.scope-points h3{font-size:19px;letter-spacing:-.035em;margin:0 0 7px}
+.scope-points p{font-size:13px;line-height:1.7;color:#5d574e;margin:0}
+.faq-section{padding:90px 0}
+.faqs details{border-bottom:1px solid #17171430;padding:18px 0}
+.faqs summary{font-weight:650;letter-spacing:-.02em}
+.contact-section{padding:clamp(30px,6vw,78px);background:#1b1a17;color:#f2eee5}
+.contact-copy>p{color:#c6bfb3;line-height:1.8}
+.contact-email{color:#e7b88d}
+.contact-location{color:#c6bfb3}
+.contact-form label{font-size:12px;letter-spacing:.03em}
+.contact-form input,.contact-form select,.contact-form textarea{padding:14px 13px;min-height:48px}
+.contact-form .btn{background:#e7b88d;color:#1b1a17;border:0}
+.contact-form .btn:hover{background:#f2d0ad}
+@media(max-width:900px){.scope-section{grid-template-columns:1fr;gap:34px}.section,.work-section,.products-section{padding-top:72px;padding-bottom:72px}.service-card{min-height:0}}
+@media(max-width:700px){.hero{padding-top:48px;padding-bottom:42px}.hero h1{font-size:clamp(47px,12vw,62px)}.hero-lead{font-size:15px}.section,.work-section,.products-section{padding-top:62px;padding-bottom:62px}.products-section{padding-left:18px;padding-right:18px}.product-card{padding:24px;min-height:0}.project-art{min-height:220px}.scope-section{padding:62px 0}.scope-copy h2{font-size:42px}.process-section{padding:28px 22px}.contact-section{padding:30px 20px}}
+@media(prefers-reduced-motion:reduce){.service-card{transition:none}.service-card:hover{transform:none}}
