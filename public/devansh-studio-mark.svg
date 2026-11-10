@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 190" role="img" aria-label="Devansh Studio Live monogram">
+<defs>
+ <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff0a8"/><stop offset=".35" stop-color="#d9a83e"/><stop offset=".68" stop-color="#fff0b0"/><stop offset="1" stop-color="#98651b"/></linearGradient>
+ <linearGradient id="black" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#4b4b4b"/><stop offset=".4" stop-color="#08090c"/><stop offset="1" stop-color="#24262b"/></linearGradient>
+ <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%"><feGaussianBlur in="SourceAlpha" stdDeviation="3"/><feOffset dy="4"/><feComponentTransfer><feFuncA type="linear" slope=".28"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<g filter="url(#shadow)" stroke-linejoin="round">
+ <path d="M34 30h88c25 0 39 15 39 37 0 21-14 36-39 36H92v48H43V77" fill="none" stroke="url(#black)" stroke-width="17" stroke-linecap="square"/>
+ <path d="M180 24h14v115" fill="none" stroke="url(#gold)" stroke-width="7" stroke-linecap="round"/>
+ <path d="M28 116c34-43 82-49 126-23 17 10 29 24 38 43" fill="none" stroke="url(#gold)" stroke-width="8" stroke-linecap="round"/>
+ <path d="M103 61l35 22-35 22z" fill="url(#gold)" stroke="#8b5b16" stroke-width="2"/>
+</g>
+</svg>
