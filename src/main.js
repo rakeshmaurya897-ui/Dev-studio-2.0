@@ -71,3 +71,20 @@ document.querySelector('#contactForm').addEventListener('submit',event=>{
    items.forEach(el=>io.observe(el));
  }else items.forEach(el=>el.classList.add('is-visible'));
 })();
+
+// GA4 interaction events. A WhatsApp enquiry opening is intent, not a confirmed lead.
+if (typeof window.gtag === 'function') {
+  document.addEventListener('click', (event) => {
+    const link = event.target.closest('a[href]');
+    if (!link) return;
+    const href = link.href;
+    const label = (link.textContent || link.getAttribute('aria-label') || '').trim().slice(0, 100);
+    if (href.startsWith('https://wa.me/') || href.includes('api.whatsapp.com/')) {
+      window.gtag('event', 'whatsapp_click', { link_url: href, link_text: label });
+    } else if (href.includes('gumroad.com/')) {
+      window.gtag('event', 'gumroad_checkout_click', { link_url: href, link_text: label });
+    } else if (link.pathname.includes('food-truck-event-profit-calculator') || link.pathname.includes('her-sacred-kashi')) {
+      window.gtag('event', 'product_click', { link_url: href, link_text: label });
+    }
+  });
+}
