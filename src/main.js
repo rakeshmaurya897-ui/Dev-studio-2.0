@@ -81,14 +81,24 @@ document.querySelector('#contactForm').addEventListener('submit',event=>{
 const sendGA4Event=(name,params={})=>{
  if(typeof window.gtag==='function') window.gtag('event',name,{...params,transport_type:'beacon'});
 };
+// Bind directly to the floating WhatsApp CTA so this high-value action is tracked
+// independently of the automatic Enhanced Measurement "click" event.
+const whatsappFloat=document.querySelector('a.whatsapp-float');
+if(whatsappFloat){
+ whatsappFloat.addEventListener('click',()=>{
+  sendGA4Event('whatsapp_click',{
+   link_url:whatsappFloat.href,
+   link_text:'Chat on WhatsApp',
+   link_classes:'whatsapp-float'
+  });
+ },{capture:true});
+}
 document.addEventListener('click',(event)=>{
  const link=event.target.closest('a[href]');
  if(!link) return;
  const href=link.href;
  const label=(link.textContent||link.getAttribute('aria-label')||'').trim().slice(0,100);
- if(href.startsWith('https://wa.me/')||href.includes('api.whatsapp.com/')){
-  sendGA4Event('whatsapp_click',{link_url:href,link_text:label});
- }else if(href.includes('gumroad.com/')){
+ if(href.includes('gumroad.com/')){
   sendGA4Event('gumroad_checkout_click',{link_url:href,link_text:label});
   sendGA4Event('begin_checkout',{currency:'USD',link_url:href});
  }else if(link.pathname.includes('food-truck-event-profit-calculator')||link.pathname.includes('her-sacred-kashi')){
