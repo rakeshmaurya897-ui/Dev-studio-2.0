@@ -37,6 +37,7 @@ document.querySelector('#contactForm').addEventListener('submit',event=>{
  const details=String(data.get('message')||'').trim()
  const body=['Hello DevStudio Live, I would like to discuss a project.','', 'Name: '+name, ...(contactEmail?['Email: '+contactEmail]:[]), 'Service: '+service, '', 'Project details:', details].join('\n')
  document.querySelector('#formStatus').textContent='WhatsApp will open with your enquiry prepared. Tap Send there to deliver it.'
+ if (typeof window.gtag === 'function') window.gtag('event', 'whatsapp_enquiry_open', { service_name: service, has_email: Boolean(contactEmail) })
  window.location.href='https://wa.me/919235727927?text='+encodeURIComponent(body)
 })
 /* Welcome + scroll reveal V2 */
