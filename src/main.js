@@ -37,8 +37,12 @@ document.querySelector('#contactForm').addEventListener('submit',event=>{
  const details=String(data.get('message')||'').trim()
  const body=['Hello DevStudio Live, I would like to discuss a project.','', 'Name: '+name, ...(contactEmail?['Email: '+contactEmail]:[]), 'Service: '+service, '', 'Project details:', details].join('\n')
  document.querySelector('#formStatus').textContent='WhatsApp will open with your enquiry prepared. Tap Send there to deliver it.'
- if (typeof window.gtag === 'function') window.gtag('event', 'whatsapp_enquiry_open', { service_name: service, has_email: Boolean(contactEmail) })
- window.location.href='https://wa.me/919235727927?text='+encodeURIComponent(body)
+ const whatsappUrl='https://wa.me/919235727927?text='+encodeURIComponent(body)
+ const continueToWhatsApp=()=>{window.location.href=whatsappUrl}
+ if(typeof window.gtag==='function'){
+  window.gtag('event','whatsapp_enquiry_open',{service_name:service,has_email:Boolean(contactEmail),event_callback:continueToWhatsApp,event_timeout:1200})
+  setTimeout(continueToWhatsApp,1300)
+ }else continueToWhatsApp()
 })
 /* Welcome + scroll reveal V2 */
 (()=>{
@@ -73,19 +77,23 @@ document.querySelector('#contactForm').addEventListener('submit',event=>{
  }else items.forEach(el=>el.classList.add('is-visible'));
 })();
 
-// GA4 interaction events. A WhatsApp enquiry opening is intent, not a confirmed lead.
-if (typeof window.gtag === 'function') {
-  document.addEventListener('click', (event) => {
-    const link = event.target.closest('a[href]');
-    if (!link) return;
-    const href = link.href;
-    const label = (link.textContent || link.getAttribute('aria-label') || '').trim().slice(0, 100);
-    if (href.startsWith('https://wa.me/') || href.includes('api.whatsapp.com/')) {
-      window.gtag('event', 'whatsapp_click', { link_url: href, link_text: label });
-    } else if (href.includes('gumroad.com/')) {
-      window.gtag('event', 'gumroad_checkout_click', { link_url: href, link_text: label });
-    } else if (link.pathname.includes('food-truck-event-profit-calculator') || link.pathname.includes('her-sacred-kashi')) {
-      window.gtag('event', 'product_click', { link_url: href, link_text: label });
-    }
-  });
-}
+// GA4 interaction tracking. A WhatsApp handoff is intent, not a confirmed lead or sale.
+const sendGA4Event=(name,params={})=>{
+ if(typeof window.gtag==='function') window.gtag('event',name,{...params,transport_type:'beacon'});
+};
+document.addEventListener('click',(event)=>{
+ const link=event.target.closest('a[href]');
+ if(!link) return;
+ const href=link.href;
+ const label=(link.textContent||link.getAttribute('aria-label')||'').trim().slice(0,100);
+ if(href.startsWith('https://wa.me/')||href.includes('api.whatsapp.com/')){
+  sendGA4Event('whatsapp_click',{link_url:href,link_text:label});
+ }else if(href.includes('gumroad.com/')){
+  sendGA4Event('gumroad_checkout_click',{link_url:href,link_text:label});
+  sendGA4Event('begin_checkout',{currency:'USD',link_url:href});
+ }else if(link.pathname.includes('food-truck-event-profit-calculator')||link.pathname.includes('her-sacred-kashi')){
+  sendGA4Event('product_click',{link_url:href,link_text:label});
+ }else if(href.startsWith('mailto:')){
+  sendGA4Event('email_click',{link_url:href,link_text:label});
+ }
+});
